@@ -51,7 +51,7 @@ CREATE TABLE ligcom(
     qtecde INT(10) NOT NULL,
     priuni VARCHAR(50) NOT NULL,
     qteliv INT(10),
-    derliv DATETIME NOT NULL,
+    derliv DATE NOT NULL,
     numcom INT(10) NOT NULL,
     codart CHAR(4) NOT NULL,
     PRIMARY KEY (numlig),
