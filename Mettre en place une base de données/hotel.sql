@@ -13,7 +13,7 @@ CREATE TABLE Hotel(
     cat_hotel VARCHAR(10) NOT NULL,
     cap_hotel SMALLINT NOT NULL,
     adr_hotel VARCHAR(255) NOT NULL UNIQUE,
-    num_station INT,
+    num_station INT NOT NULL,
     PRIMARY KEY (num_hotel),
     FOREIGN KEY (num_station) REFERENCES Station(num_station)
 );
@@ -24,7 +24,7 @@ CREATE TABLE Chambre(
     cap_chambre TINYINT NOT NULL,
     deg_con_chambre TINYINT NOT NULL,
     exp_chambre VARCHAR(30) NOT NULL,
-    num_hotel INT,
+    num_hotel INT NOT NULL,
     PRIMARY KEY (num_chambre),
     FOREIGN KEY (num_hotel) REFERENCES Hotel(num_hotel)
 );

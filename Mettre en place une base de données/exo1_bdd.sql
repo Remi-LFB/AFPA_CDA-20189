@@ -17,8 +17,8 @@ CREATE TABLE Groupe(
 );
 
 CREATE TABLE Appartient(
-    per_num INT,
-    gro_num INT,
+    per_num INT NOT NULL,
+    gro_num INT NOT NULL,
     PRIMARY KEY(per_num, gro_num),
     FOREIGN KEY(per_num) REFERENCES Personne(per_num),
     FOREIGN KEY(gro_num) REFERENCES Groupe(gro_num)
