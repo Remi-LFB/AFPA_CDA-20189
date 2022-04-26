@@ -59,4 +59,17 @@ CREATE TABLE ligcom(
     FOREIGN KEY (codart) REFERENCES produit(codart)
 );
 
+CREATE TABLE ligcom(
+    numlig TINYINT(3),
+    qtecde INT(10) NOT NULL,
+    priuni VARCHAR(50) NOT NULL,
+    qteliv INT(10),
+    derliv DATE NOT NULL,
+    numcom INT(10) NOT NULL,
+    codart CHAR(4) NOT NULL,
+    PRIMARY KEY (numlig, numcom),
+    FOREIGN KEY (numcom) REFERENCES entcom(numcom),
+    FOREIGN KEY (codart) REFERENCES produit(codart)
+);
+
 CREATE INDEX index_numfou ON entcom(numfou);
