@@ -13,9 +13,9 @@ try {
     die();
 }
 
-$req = $db->query('SELECT * FROM produits');
+$req = $db->query('SELECT pro_libelle FROM produits');
 $tab = $req->fetchAll(PDO::FETCH_OBJ);
 
-foreach ($tab as $row) {
-    echo "<li>$row->pro_libelle</li>";
-}
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
+echo json_encode($tab);

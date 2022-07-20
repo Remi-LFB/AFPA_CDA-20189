@@ -13,9 +13,9 @@ try {
     die();
 }
 
-$req = $db->query('SELECT * FROM regions');
+$req = $db->query('SELECT reg_id, reg_v_nom FROM regions');
 $tab = $req->fetchAll(PDO::FETCH_OBJ);
 
-foreach ($tab as $row) {
-    echo "<option value='$row->reg_id'>$row->reg_v_nom</option>";
-}
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
+echo json_encode($tab);

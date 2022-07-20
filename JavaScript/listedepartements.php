@@ -15,9 +15,9 @@ try {
     die();
 }
 
-$req = $db->query('SELECT * FROM departements WHERE dep_reg_id = ' . $id);
+$req = $db->query('SELECT dep_id, dep_nom FROM departements WHERE dep_reg_id = ' . $id);
 $tab = $req->fetchAll(PDO::FETCH_OBJ);
 
-foreach ($tab as $row) {
-    echo "<option value='$row->dep_id'>$row->dep_nom</option>";
-}
+header("Access-Control-Allow-Origin: *");
+header('Content-Type: application/json');
+echo json_encode($tab);
