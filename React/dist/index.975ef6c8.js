@@ -2901,53 +2901,58 @@ $parcel$ReactRefreshHelpers$20e5.prelude(module);
 try {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
-var _react = require("react");
-var _reactDefault = parcelHelpers.interopDefault(_react);
-var _reactDom = require("react-dom");
-var _reactDomDefault = parcelHelpers.interopDefault(_reactDom);
-const Greetings = (props)=>{
-    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
-        children: [
-            "Salut ",
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("strong", {
-                children: props.name
-            }, void 0, false, {
-                fileName: "src/index.js",
-                lineNumber: 6,
-                columnNumber: 21
-            }, undefined),
-            " c'est d\xe9j\xe0 du React !!!"
-        ]
-    }, void 0, true, {
-        fileName: "src/index.js",
-        lineNumber: 6,
-        columnNumber: 9
-    }, undefined);
-};
-_c = Greetings;
-const App = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Greetings, {
-        name: "Germain"
-    }, void 0, false, {
-        fileName: "src/index.js",
-        lineNumber: 10,
-        columnNumber: 19
-    }, undefined);
-_c1 = App;
-(0, _reactDomDefault.default).render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(App, {}, void 0, false, {
+// import ReactDOM from "react-dom";
+var _client = require("react-dom/client");
+var _react = require("react"); // https://fr.reactjs.org/docs/strict-mode.html
+var _app = require("./App");
+var _appDefault = parcelHelpers.interopDefault(_app);
+var _counter = require("./Counter");
+var _counterDefault = parcelHelpers.interopDefault(_counter);
+var _shoppingList = require("./ShoppingList");
+var _shoppingListDefault = parcelHelpers.interopDefault(_shoppingList);
+var _tmdb = require("./Tmdb");
+var _tmdbDefault = parcelHelpers.interopDefault(_tmdb);
+/* Ancienne méthode de rendu
+ReactDOM.render(<div><App /><Counter /></div>, app);
+
+Nouvelle méthode de rendu */ const container = document.getElementById("app");
+const root = (0, _client.createRoot)(container);
+// Utilisation du Strict Mode qui permet également d'envelopper les composants
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.StrictMode), {
+    children: [
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _appDefault.default), {}, void 0, false, {
+            fileName: "src/index.js",
+            lineNumber: 20,
+            columnNumber: 9
+        }, undefined),
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _counterDefault.default), {}, void 0, false, {
+            fileName: "src/index.js",
+            lineNumber: 21,
+            columnNumber: 9
+        }, undefined),
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _shoppingListDefault.default), {}, void 0, false, {
+            fileName: "src/index.js",
+            lineNumber: 22,
+            columnNumber: 9
+        }, undefined),
+        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _tmdbDefault.default), {}, void 0, false, {
+            fileName: "src/index.js",
+            lineNumber: 23,
+            columnNumber: 9
+        }, undefined)
+    ]
+}, void 0, true, {
     fileName: "src/index.js",
-    lineNumber: 12,
-    columnNumber: 17
-}, undefined), document.getElementById("app"));
-var _c, _c1;
-$RefreshReg$(_c, "Greetings");
-$RefreshReg$(_c1, "App");
+    lineNumber: 19,
+    columnNumber: 5
+}, undefined));
 
   $parcel$ReactRefreshHelpers$20e5.postlude(module);
 } finally {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","react-dom":"j6uA9","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","./App":"e9Zfo","./Counter":"gtwOv","./ShoppingList":"5E86N","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Tmdb":"9Kyez"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
@@ -5648,7 +5653,28 @@ module.exports = require("./cjs/react.development.js");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"j6uA9":[function(require,module,exports) {
+},{}],"lOjBx":[function(require,module,exports) {
+"use strict";
+var m = require("react-dom");
+var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.createRoot(c, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+        return m.hydrateRoot(c, h, o);
+    } finally{
+        i.usingClientEntryPoint = false;
+    }
+};
+
+},{"react-dom":"j6uA9"}],"j6uA9":[function(require,module,exports) {
 "use strict";
 function checkDCE() {
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ === "undefined" || typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.checkDCE !== "function") return;
@@ -27079,7 +27105,91 @@ module.exports = require("./cjs/scheduler.development.js");
     /* global __REACT_DEVTOOLS_GLOBAL_HOOK__ */ if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
 })();
 
-},{}],"gkKU3":[function(require,module,exports) {
+},{}],"e9Zfo":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2430 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2430.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+function App() {
+    _s();
+    const [nom, setNom] = (0, _react.useState)("l'asticot");
+    const handleChangeNom = (evt)=>{
+        setNom(evt.target.value);
+    };
+    const [prenom, setPrenom] = (0, _react.useState)("Roro");
+    const handleChangePrenom = (evt)=>{
+        setPrenom(evt.target.value);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "App",
+        children: [
+            "Bonjour ",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("span", {
+                className: "bolder",
+                children: [
+                    prenom,
+                    " ",
+                    nom
+                ]
+            }, void 0, true, {
+                fileName: "src/App.jsx",
+                lineNumber: 19,
+                columnNumber: 21
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 19,
+                columnNumber: 67
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 19,
+                columnNumber: 73
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                value: nom,
+                onChange: handleChangeNom
+            }, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 21,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                value: prenom,
+                onChange: handleChangePrenom
+            }, void 0, false, {
+                fileName: "src/App.jsx",
+                lineNumber: 22,
+                columnNumber: 13
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/App.jsx",
+        lineNumber: 18,
+        columnNumber: 9
+    }, this);
+}
+exports.default = App;
+_s(App, "RZ1TtSY36nlRH6hRITZjxQIplqs=");
+_c = App;
+var _c;
+$RefreshReg$(_c, "App");
+
+  $parcel$ReactRefreshHelpers$2430.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -27229,6 +27339,244 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire2097")
+},{"react-refresh/runtime":"786KC"}],"gtwOv":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$da22 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$da22.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+function Counter() {
+    _s();
+    const [counter, setCounter] = (0, _react.useState)(0);
+    const handleIncreaseCounter = ()=>{
+        setCounter(counter + 1);
+    };
+    const handleDecreaseCounter = ()=>{
+        setCounter(counter - 1);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Counter",
+        children: [
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: handleDecreaseCounter,
+                children: "-"
+            }, void 0, false, {
+                fileName: "src/Counter.jsx",
+                lineNumber: 16,
+                columnNumber: 13
+            }, this),
+            " Compteur : ",
+            counter,
+            " ",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: handleIncreaseCounter,
+                children: "+"
+            }, void 0, false, {
+                fileName: "src/Counter.jsx",
+                lineNumber: 16,
+                columnNumber: 85
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/Counter.jsx",
+        lineNumber: 15,
+        columnNumber: 9
+    }, this);
+}
+exports.default = Counter;
+_s(Counter, "mgO7WMHyhiBnLtH7uw/qAj2Cy9A=");
+_c = Counter;
+var _c;
+$RefreshReg$(_c, "Counter");
+
+  $parcel$ReactRefreshHelpers$da22.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"5E86N":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$e2af = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$e2af.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+function ShoppingList() {
+    _s();
+    const [shoppingList, setShoppingList] = (0, _react.useState)([]);
+    const handleShoppingList = ()=>{
+        const input = document.getElementById("input");
+        setShoppingList((current)=>[
+                ...current,
+                input.value
+            ]);
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "ShoppingList",
+        children: [
+            "Liste des courses : ",
+            shoppingList.map((element, index)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                        children: element
+                    }, void 0, false, {
+                        fileName: "src/ShoppingList.jsx",
+                        lineNumber: 17,
+                        columnNumber: 25
+                    }, this)
+                }, index, false, {
+                    fileName: "src/ShoppingList.jsx",
+                    lineNumber: 16,
+                    columnNumber: 21
+                }, this);
+            }),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                id: "input"
+            }, void 0, false, {
+                fileName: "src/ShoppingList.jsx",
+                lineNumber: 22,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: handleShoppingList,
+                children: "Ajouter"
+            }, void 0, false, {
+                fileName: "src/ShoppingList.jsx",
+                lineNumber: 22,
+                columnNumber: 44
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/ShoppingList.jsx",
+        lineNumber: 13,
+        columnNumber: 9
+    }, this);
+}
+exports.default = ShoppingList;
+_s(ShoppingList, "zkX37W+WpezPOYdGtb9+hsJQSRI=");
+_c = ShoppingList;
+var _c;
+$RefreshReg$(_c, "ShoppingList");
+
+  $parcel$ReactRefreshHelpers$e2af.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"9Kyez":[function(require,module,exports) {
+var $parcel$ReactRefreshHelpers$2863 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
+var prevRefreshReg = window.$RefreshReg$;
+var prevRefreshSig = window.$RefreshSig$;
+$parcel$ReactRefreshHelpers$2863.prelude(module);
+
+try {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+var _jsxDevRuntime = require("react/jsx-dev-runtime");
+var _react = require("react");
+var _s = $RefreshSig$();
+function Tmdb() {
+    _s();
+    const [moviesList, setMoviesList] = (0, _react.useState)([]);
+    const [element1, setElement] = (0, _react.useState)("");
+    const handleChangeElement = (evt)=>{
+        setElement(evt.target.value);
+    };
+    const handleMoviesList = ()=>{
+        fetch("http://api.themoviedb.org/3/search/movie?api_key=f33cd318f5135dba306176c13104506a&query=" + element1).then((response)=>{
+            return response.json();
+        }).then((data)=>{
+            setMoviesList(data.results);
+        }).catch((error)=>{
+            console.log(error);
+        });
+    };
+    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        className: "Tmdb",
+        children: [
+            "R\xe9sultats de la recherche : ",
+            moviesList.map((element, index)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        "Titre : ",
+                        element.title,
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 29,
+                            columnNumber: 48
+                        }, this),
+                        "Date de sortie : ",
+                        element.release_date,
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 30,
+                            columnNumber: 64
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: "http://image.tmdb.org/t/p/w185" + element.poster_path
+                        }, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 31,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 31,
+                            columnNumber: 93
+                        }, this)
+                    ]
+                }, index, true, {
+                    fileName: "src/Tmdb.jsx",
+                    lineNumber: 28,
+                    columnNumber: 21
+                }, this);
+            }),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
+                type: "text",
+                onChange: handleChangeElement
+            }, void 0, false, {
+                fileName: "src/Tmdb.jsx",
+                lineNumber: 36,
+                columnNumber: 13
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
+                onClick: handleMoviesList,
+                children: "Rechercher"
+            }, void 0, false, {
+                fileName: "src/Tmdb.jsx",
+                lineNumber: 36,
+                columnNumber: 64
+            }, this)
+        ]
+    }, void 0, true, {
+        fileName: "src/Tmdb.jsx",
+        lineNumber: 25,
+        columnNumber: 9
+    }, this);
+}
+exports.default = Tmdb;
+_s(Tmdb, "j0bs+Oc2jOVYXc9nd9XcrCT/AtI=");
+_c = Tmdb;
+var _c;
+$RefreshReg$(_c, "Tmdb");
+
+  $parcel$ReactRefreshHelpers$2863.postlude(module);
+} finally {
+  window.$RefreshReg$ = prevRefreshReg;
+  window.$RefreshSig$ = prevRefreshSig;
+}
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}]},["1xC6H","ShInH","8lqZg"], "8lqZg", "parcelRequire2097")
 
 //# sourceMappingURL=index.975ef6c8.js.map

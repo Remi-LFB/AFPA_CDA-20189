@@ -1,12 +1,25 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
+// import ReactDOM from "react-dom";
+import {createRoot} from "react-dom/client";
+import {StrictMode} from "react"; // https://fr.reactjs.org/docs/strict-mode.html
 
-const Greetings = props => {
-    return(
-        <span>Salut <strong>{props.name}</strong> c'est déjà du React !!!</span>
-    )
-}
+import App from "./App";
+import Counter from "./Counter";
+import ShoppingList from "./ShoppingList";
+import Tmdb from "./Tmdb";
 
-const App = () => <Greetings name="Germain" />
+/* Ancienne méthode de rendu
+ReactDOM.render(<div><App /><Counter /></div>, app);
 
-ReactDOM.render(<App />, document.getElementById('app'))
+Nouvelle méthode de rendu */
+const container = document.getElementById("app");
+const root = createRoot(container);
+
+// Utilisation du Strict Mode qui permet également d'envelopper les composants
+root.render(
+    <StrictMode>
+        <App />
+        <Counter />
+        <ShoppingList />
+        <Tmdb />
+    </StrictMode>
+);
