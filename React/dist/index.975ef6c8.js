@@ -2952,7 +2952,7 @@ root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)((0, _react.StrictMode), {
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","./App":"e9Zfo","./Counter":"gtwOv","./ShoppingList":"5E86N","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","./Tmdb":"9Kyez"}],"iTorj":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react-dom/client":"lOjBx","react":"21dqq","./App":"e9Zfo","./Counter":"gtwOv","./ShoppingList":"5E86N","./Tmdb":"9Kyez","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"iTorj":[function(require,module,exports) {
 "use strict";
 module.exports = require("./cjs/react-jsx-dev-runtime.development.js");
 
@@ -27116,6 +27116,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _jsxDevRuntime = require("react/jsx-dev-runtime");
 var _react = require("react");
+var _stylesCss = require("./styles.css");
 var _s = $RefreshSig$();
 function App() {
     _s();
@@ -27140,18 +27141,13 @@ function App() {
                 ]
             }, void 0, true, {
                 fileName: "src/App.jsx",
-                lineNumber: 19,
+                lineNumber: 20,
                 columnNumber: 21
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 19,
+                lineNumber: 20,
                 columnNumber: 67
-            }, this),
-            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                fileName: "src/App.jsx",
-                lineNumber: 19,
-                columnNumber: 73
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                 type: "text",
@@ -27159,7 +27155,7 @@ function App() {
                 onChange: handleChangeNom
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 21,
+                lineNumber: 22,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
@@ -27168,13 +27164,13 @@ function App() {
                 onChange: handleChangePrenom
             }, void 0, false, {
                 fileName: "src/App.jsx",
-                lineNumber: 22,
+                lineNumber: 23,
                 columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/App.jsx",
-        lineNumber: 18,
+        lineNumber: 19,
         columnNumber: 9
     }, this);
 }
@@ -27189,37 +27185,7 @@ $RefreshReg$(_c, "App");
   window.$RefreshReg$ = prevRefreshReg;
   window.$RefreshSig$ = prevRefreshSig;
 }
-},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru"}],"gkKU3":[function(require,module,exports) {
-exports.interopDefault = function(a) {
-    return a && a.__esModule ? a : {
-        default: a
-    };
-};
-exports.defineInteropFlag = function(a) {
-    Object.defineProperty(a, "__esModule", {
-        value: true
-    });
-};
-exports.exportAll = function(source, dest) {
-    Object.keys(source).forEach(function(key) {
-        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
-        Object.defineProperty(dest, key, {
-            enumerable: true,
-            get: function() {
-                return source[key];
-            }
-        });
-    });
-    return dest;
-};
-exports.export = function(dest, destName, get) {
-    Object.defineProperty(dest, destName, {
-        enumerable: true,
-        get: get
-    });
-};
-
-},{}],"km3Ru":[function(require,module,exports) {
+},{"react/jsx-dev-runtime":"iTorj","react":"21dqq","./styles.css":"lW6qc","@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js":"km3Ru","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lW6qc":[function() {},{}],"km3Ru":[function(require,module,exports) {
 "use strict";
 var Refresh = require("react-refresh/runtime");
 function debounce(func, delay) {
@@ -27339,7 +27305,37 @@ function registerExportsForReactRefresh(module) {
     }
 }
 
-},{"react-refresh/runtime":"786KC"}],"gtwOv":[function(require,module,exports) {
+},{"react-refresh/runtime":"786KC"}],"gkKU3":[function(require,module,exports) {
+exports.interopDefault = function(a) {
+    return a && a.__esModule ? a : {
+        default: a
+    };
+};
+exports.defineInteropFlag = function(a) {
+    Object.defineProperty(a, "__esModule", {
+        value: true
+    });
+};
+exports.exportAll = function(source, dest) {
+    Object.keys(source).forEach(function(key) {
+        if (key === "default" || key === "__esModule" || dest.hasOwnProperty(key)) return;
+        Object.defineProperty(dest, key, {
+            enumerable: true,
+            get: function() {
+                return source[key];
+            }
+        });
+    });
+    return dest;
+};
+exports.export = function(dest, destName, get) {
+    Object.defineProperty(dest, destName, {
+        enumerable: true,
+        get: get
+    });
+};
+
+},{}],"gtwOv":[function(require,module,exports) {
 var $parcel$ReactRefreshHelpers$da22 = require("@parcel/transformer-react-refresh-wrap/lib/helpers/helpers.js");
 var prevRefreshReg = window.$RefreshReg$;
 var prevRefreshSig = window.$RefreshSig$;
@@ -27354,17 +27350,15 @@ var _s = $RefreshSig$();
 function Counter() {
     _s();
     const [counter, setCounter] = (0, _react.useState)(0);
-    const handleIncreaseCounter = ()=>{
-        setCounter(counter + 1);
-    };
-    const handleDecreaseCounter = ()=>{
-        setCounter(counter - 1);
+    const handleClickCounter = (evt)=>{
+        if (evt.target.innerHTML === "-") setCounter(counter - 1);
+        else setCounter(counter + 1);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "Counter",
         children: [
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: handleDecreaseCounter,
+                onClick: handleClickCounter,
                 children: "-"
             }, void 0, false, {
                 fileName: "src/Counter.jsx",
@@ -27375,12 +27369,12 @@ function Counter() {
             counter,
             " ",
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
-                onClick: handleIncreaseCounter,
+                onClick: handleClickCounter,
                 children: "+"
             }, void 0, false, {
                 fileName: "src/Counter.jsx",
                 lineNumber: 16,
-                columnNumber: 85
+                columnNumber: 82
             }, this)
         ]
     }, void 0, true, {
@@ -27415,38 +27409,25 @@ var _s = $RefreshSig$();
 function ShoppingList() {
     _s();
     const [shoppingList, setShoppingList] = (0, _react.useState)([]);
+    const [element1, setElement] = (0, _react.useState)("");
     const handleShoppingList = ()=>{
-        const input = document.getElementById("input");
         setShoppingList((current)=>[
                 ...current,
-                input.value
+                element1
             ]);
+    };
+    const handleChangeElement = (evt)=>{
+        setElement(evt.target.value);
     };
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "ShoppingList",
         children: [
-            "Liste des courses : ",
-            shoppingList.map((element, index)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    children: /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
-                        children: element
-                    }, void 0, false, {
-                        fileName: "src/ShoppingList.jsx",
-                        lineNumber: 17,
-                        columnNumber: 25
-                    }, this)
-                }, index, false, {
-                    fileName: "src/ShoppingList.jsx",
-                    lineNumber: 16,
-                    columnNumber: 21
-                }, this);
-            }),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                 type: "text",
-                id: "input"
+                onChange: handleChangeElement
             }, void 0, false, {
                 fileName: "src/ShoppingList.jsx",
-                lineNumber: 22,
+                lineNumber: 17,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27454,18 +27435,44 @@ function ShoppingList() {
                 children: "Ajouter"
             }, void 0, false, {
                 fileName: "src/ShoppingList.jsx",
-                lineNumber: 22,
-                columnNumber: 44
+                lineNumber: 17,
+                columnNumber: 64
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/ShoppingList.jsx",
+                lineNumber: 17,
+                columnNumber: 117
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/ShoppingList.jsx",
+                lineNumber: 17,
+                columnNumber: 123
+            }, this),
+            "Liste des courses :",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("ol", {
+                children: shoppingList.map((element, index)=>{
+                    return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("li", {
+                        children: element
+                    }, void 0, false, {
+                        fileName: "src/ShoppingList.jsx",
+                        lineNumber: 23,
+                        columnNumber: 25
+                    }, this);
+                })
+            }, void 0, false, {
+                fileName: "src/ShoppingList.jsx",
+                lineNumber: 20,
+                columnNumber: 13
             }, this)
         ]
     }, void 0, true, {
         fileName: "src/ShoppingList.jsx",
-        lineNumber: 13,
+        lineNumber: 16,
         columnNumber: 9
     }, this);
 }
 exports.default = ShoppingList;
-_s(ShoppingList, "zkX37W+WpezPOYdGtb9+hsJQSRI=");
+_s(ShoppingList, "H3fnbpxkPBC+tuFI5dQO+zP5gTo=");
 _c = ShoppingList;
 var _c;
 $RefreshReg$(_c, "ShoppingList");
@@ -27506,49 +27513,12 @@ function Tmdb() {
     return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
         className: "Tmdb",
         children: [
-            "R\xe9sultats de la recherche : ",
-            moviesList.map((element, index)=>{
-                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
-                    children: [
-                        "Titre : ",
-                        element.title,
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/Tmdb.jsx",
-                            lineNumber: 29,
-                            columnNumber: 48
-                        }, this),
-                        "Date de sortie : ",
-                        element.release_date,
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
-                            fileName: "src/Tmdb.jsx",
-                            lineNumber: 30,
-                            columnNumber: 64
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
-                            src: "http://image.tmdb.org/t/p/w185" + element.poster_path
-                        }, void 0, false, {
-                            fileName: "src/Tmdb.jsx",
-                            lineNumber: 31,
-                            columnNumber: 25
-                        }, this),
-                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
-                            fileName: "src/Tmdb.jsx",
-                            lineNumber: 31,
-                            columnNumber: 93
-                        }, this)
-                    ]
-                }, index, true, {
-                    fileName: "src/Tmdb.jsx",
-                    lineNumber: 28,
-                    columnNumber: 21
-                }, this);
-            }),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("input", {
                 type: "text",
                 onChange: handleChangeElement
             }, void 0, false, {
                 fileName: "src/Tmdb.jsx",
-                lineNumber: 36,
+                lineNumber: 26,
                 columnNumber: 13
             }, this),
             /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("button", {
@@ -27556,9 +27526,73 @@ function Tmdb() {
                 children: "Rechercher"
             }, void 0, false, {
                 fileName: "src/Tmdb.jsx",
-                lineNumber: 36,
+                lineNumber: 26,
                 columnNumber: 64
-            }, this)
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/Tmdb.jsx",
+                lineNumber: 26,
+                columnNumber: 118
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/Tmdb.jsx",
+                lineNumber: 26,
+                columnNumber: 124
+            }, this),
+            "R\xe9sultats de la recherche :",
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/Tmdb.jsx",
+                lineNumber: 28,
+                columnNumber: 40
+            }, this),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                fileName: "src/Tmdb.jsx",
+                lineNumber: 28,
+                columnNumber: 46
+            }, this),
+            " ",
+            moviesList.map((element, index)=>{
+                return /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+                    children: [
+                        "Titre : ",
+                        element.title,
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 31,
+                            columnNumber: 48
+                        }, this),
+                        "Date de sortie : ",
+                        element.release_date,
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 32,
+                            columnNumber: 64
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("br", {}, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 32,
+                            columnNumber: 70
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("img", {
+                            src: "http://image.tmdb.org/t/p/w185" + element.poster_path,
+                            alt: element.title
+                        }, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 33,
+                            columnNumber: 25
+                        }, this),
+                        /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("hr", {}, void 0, false, {
+                            fileName: "src/Tmdb.jsx",
+                            lineNumber: 33,
+                            columnNumber: 113
+                        }, this)
+                    ]
+                }, index, true, {
+                    fileName: "src/Tmdb.jsx",
+                    lineNumber: 30,
+                    columnNumber: 21
+                }, this);
+            })
         ]
     }, void 0, true, {
         fileName: "src/Tmdb.jsx",

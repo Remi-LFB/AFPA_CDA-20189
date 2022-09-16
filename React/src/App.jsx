@@ -1,4 +1,5 @@
-import {React, useState} from 'react';
+import { React, useState } from 'react';
+import "./styles.css";
 
 export default function App() { // Exportation du composant à sa déclaration
 
@@ -16,7 +17,7 @@ export default function App() { // Exportation du composant à sa déclaration
 
     return (
         <div className="App">
-            Bonjour <span className='bolder'>{prenom} {nom}</span><br /><br />
+            Bonjour <span className='bolder'>{prenom} {nom}</span><br />
 
             <input type="text" value={nom} onChange={handleChangeNom}/>
             <input type="text" value={prenom} onChange={handleChangePrenom}/>

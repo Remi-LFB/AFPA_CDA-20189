@@ -1,4 +1,4 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 
 export default function Tmdb() {
     const [moviesList, setMoviesList] = useState([]);
@@ -23,17 +23,17 @@ export default function Tmdb() {
 
     return (
         <div className="Tmdb">
-            Résultats de la recherche : {moviesList.map((element, index) => {
+            <input type="text" onChange={handleChangeElement}/><button onClick={handleMoviesList}>Rechercher</button><br /><br />
+
+            Résultats de la recherche :<br /><br /> {moviesList.map((element, index) => {
                 return (
                     <div key={index}>
                         Titre : {element.title}<br />
-                        Date de sortie : {element.release_date}<br />
-                        <img src={"http://image.tmdb.org/t/p/w185" + element.poster_path} /><hr />
+                        Date de sortie : {element.release_date}<br /><br />
+                        <img src={"http://image.tmdb.org/t/p/w185" + element.poster_path} alt={element.title} /><hr />
                     </div>
                 );
-        })}
-
-            <input type="text" onChange={handleChangeElement}/><button onClick={handleMoviesList}>Rechercher</button>
+            })}
         </div>
     );
 }

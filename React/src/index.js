@@ -1,6 +1,6 @@
 // import ReactDOM from "react-dom";
-import {createRoot} from "react-dom/client";
-import {StrictMode} from "react"; // https://fr.reactjs.org/docs/strict-mode.html
+import { createRoot } from "react-dom/client";
+import { StrictMode } from "react"; // https://fr.reactjs.org/docs/strict-mode.html
 
 import App from "./App";
 import Counter from "./Counter";

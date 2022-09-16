@@ -1,25 +1,29 @@
-import {React, useState} from "react";
+import { React, useState } from "react";
 
 export default function ShoppingList() {
     const [shoppingList, setShoppingList] = useState([]);
+    const [element, setElement] = useState("");
 
     const handleShoppingList = () => {
-        const input = document.getElementById("input");
+        setShoppingList(current => [...current, element]);
+    }
 
-        setShoppingList(current => [...current, input.value]);
+    const handleChangeElement = (evt) => {
+        setElement(evt.target.value);
     }
 
     return (
         <div className="ShoppingList">
-            Liste des courses : {shoppingList.map((element, index) => {
-                return (
-                    <div key={index}>
-                        <h2>{element}</h2>
-                    </div>
-                );
-        })}
+            <input type="text" onChange={handleChangeElement}/><button onClick={handleShoppingList}>Ajouter</button><br /><br />
 
-            <input type="text" id="input"/><button onClick={handleShoppingList}>Ajouter</button>
+            Liste des courses :
+            <ol>
+                {shoppingList.map((element) => {
+                    return (
+                        <li>{element}</li>
+                    );
+                })}
+            </ol>
         </div>
     );
 }
